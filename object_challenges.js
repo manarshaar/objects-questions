@@ -23,7 +23,7 @@ function printAllProperties‌‌(object){
 
 function removeNumbersLargerThan(number, obj){
   Object.keys(obj).forEach(k => {
-    if(!isNan(obj[k]) && obj[k] > 50)
+    if(!isNan(obj[k]) && obj[k] > number)
       delete obj[k];
   })
 }
