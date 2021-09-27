@@ -138,10 +138,7 @@ function containsCommonItem(arr1, arr2){
 //O(N)
 function containsCommonItem(arr1, arr2){
   let obj1 = arr1.reduce((obj, curr) => { obj[curr] = true; return obj }, {});
-
-  let obj2 = arr2.reduce((obj, curr) => { obj[curr] = true; return obj }, {});
-
-  return Object.keys(obj1).some( e => obj2[e] );
+  return arr2.some( e=> obj1[e] );
 }
 
 // try to solve last question with O(N^2) & O(N)
